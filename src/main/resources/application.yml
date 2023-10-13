@@ -1,0 +1,21 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+  port: 8000
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/articles_db
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: false
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
