@@ -1,5 +1,7 @@
 package kz.articles.articles_app.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.Date;
 
 public class ArticleDTO {
@@ -7,6 +9,8 @@ public class ArticleDTO {
     private Long id;
     private String topic;
     private String text;
+
+    @JsonProperty("public_date")
     private Date publicDate;
 
     public ArticleDTO() {

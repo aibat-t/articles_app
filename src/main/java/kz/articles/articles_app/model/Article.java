@@ -22,6 +22,15 @@ public class Article {
     @Column(name = "public_date")
     private Date publicDate;
 
+    public Article() {
+    }
+
+    public Article(String topic, String text, Date publicDate) {
+        this.topic = topic;
+        this.text = text;
+        this.publicDate = publicDate;
+    }
+
     public Long getId() {
         return id;
     }

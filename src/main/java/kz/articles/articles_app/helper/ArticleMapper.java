@@ -13,4 +13,12 @@ public class ArticleMapper {
                 article.getPublicDate()
         );
     }
+
+    public static Article unmap(ArticleDTO articleDTO) {
+        return new Article(
+                articleDTO.getTopic(),
+                articleDTO.getText(),
+                articleDTO.getPublicDate()
+        );
+    }
 }
